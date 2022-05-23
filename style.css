@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Maven+Pro:wght@400;500;600;700;800;900&family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+  background-color: var(--very-light-gray);
+  height: 100vh;
+  font-family: "lexend deca" sans-serif;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 700px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+}
+.card-1,
+.card-2,
+.card-3 {
+  padding: 2rem 2rem 0 2rem;
+  color: var(--transparent-white);
+  line-height: 1.6;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+p {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.suv {
+  background-color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+}
+.btn {
+  background-color: var(--transparent-white);
+  color: var(--bright-orange);
+  border-radius: 30px;
+  width: 70%;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.6rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.suv .btn {
+  color: var(--dark-cyan);
+}
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+@media (max-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 2rem;
+  }
+  p {
+    margin: 0;
+    font-size: 0.65rem;
+  }
+  h1 {
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
+  }
+  .btn {
+    margin-top: 1rem;
+    padding: 5px;
+    width: 70%;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    padding: 1rem 2rem;
+    border-radius: 0;
+  }
+  img {
+    height: 1.5rem;
+  }
+  .attribution {
+    padding: 1rem;
+  }
+}
